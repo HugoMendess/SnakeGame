@@ -7,6 +7,8 @@ snake[0] = {
 	y: 8 * box
 }
 
+let direction = "right";
+
 
 function criarBG(){
 	context.fillStyle = "lightgreen";
@@ -20,6 +22,42 @@ function criarCobrinha(){
 	}
 }
 
+function iniciarJogo(){
+	criarBG();
+	criarCobrinha();
 
-criarBG();
-criarCobrinha();
+	let snakeX = snake[0].x;
+	let snakeY = snake[0].y;
+
+	if(direction == "right") {
+		snakeX = snakeX + box;
+	}
+
+	if (direction == "left") {
+		snakeX = snakeX - box;
+	}
+
+	if (direction == "up") {
+		snakeY = snakeY - box;
+	}
+
+	if (direction == "down") {
+		snakeY = snakeY + box;
+	}
+
+	snake.pop();
+
+	let newHead = {
+		x: snakeX,
+		y: snakeY
+	}
+
+	snake.unshift(newHead);
+}
+
+// passando intervelo para iniciar o jogo a cada 100 milesegundos
+let jogo = setInterval(iniciarJogo, 100);
+
+
+
+
