@@ -4,11 +4,49 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 }
 
-
+.content{
+	margin-top: 20px;
+}
 .head{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+}
+
+.head .titulo{
+	color: white;
+	background-color: #8a2be2;
+	padding: 22px;
+	font-weight: bold;
+	border-radius: 30px;
+	font-family: 'Kufam', cursive;
+	margin-top: 
+}
+
+.head #pont{
+	color: white;
+	background-color: #8a2be2;
+	padding: 15px 30px;
+	font-weight: bold;
+	border-radius: 30px;
+	font-family: 'Kufam', cursive;
+}
+
+.roape{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: bottom;
+	color: white;
+	background-color: #8a2be2;
+	padding: 10px 30px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	border-radius: 30px;
+	font-family: 'Kufam', cursive;
+	font-size: 12px;
 }
