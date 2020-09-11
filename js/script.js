@@ -2,6 +2,7 @@ let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
 let box = 32;
 let pont = 0;
+let tick = 0;
 let snake = [];
 snake[0] = {
 	x: 8 * box,
@@ -76,8 +77,14 @@ function iniciarJogo(){
 
 	for(i = 1; i<snake.length; i++){
 		if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
+			pont = pont - 50;
+			if(pont <= 0){
 			clearInterval(jogo);
-			alert("Game Over! Sua Pontuação:"+pont);
+			alert("GAME OVER! SEUS PONTOS:"+pont);
+		}
+		else{
+			document.getElementById("pont").innerHTML = "PONTOS: "+ pont;
+		}
 		}
 	}
 
@@ -113,9 +120,18 @@ function iniciarJogo(){
 
 	food.x = Math.floor(Math.random() * 15 + 1) * box;
 	food.y = Math.floor(Math.random() * 15 + 1) * box;
+		tick = tick + 1;
+		if(tick == 10){
+			pont = pont + 35;
+			document.getElementById("pont").innerHTML = "PONTOS: "+ pont;
+			tick = tick - tick;
+		}
+
+		else{
 		pont = pont + 15;
-		document.getElementById("pont").innerHTML = "Pontuação: "+ pont;
+		document.getElementById("pont").innerHTML = "PONTOS: "+ pont;
 	}
+}
 	
 
 
