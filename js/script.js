@@ -131,6 +131,11 @@ function iniciarJogo(){
 		pont = pont + 15;
 		document.getElementById("pont").innerHTML = "PONTOS: "+ pont;
 	}
+
+	if(pont >= 1000){
+		clearInterval(jogo);
+			alert("VOCÊ ZEROU O JOGO! SEUS PONTOS:"+pont);
+	}
 }
 	
 
