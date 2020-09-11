@@ -50,3 +50,17 @@ body{
 	font-family: 'Kufam', cursive;
 	font-size: 12px;
 }
+
+.still{
+	color: white;
+	background-color: #8a2be2;
+	padding: 2px;
+	font-weight: bold;
+	border-radius: 20px;
+	font-family: 'Kufam', cursive;
+	margin-bottom: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+

@@ -86,6 +86,24 @@ function iniciarJogo(){
 			document.getElementById("pont").innerHTML = "PONTOS: "+ pont;
 		}
 		}
+
+		if (pont >= 300) {
+			document.getElementById("mudar").innerHTML = "FASE 2";
+		}
+
+		if (pont >= 400) {
+			document.getElementById("mudar").innerHTML = "FASE 3";
+		}
+
+		if (pont >= 700) {
+			document.getElementById("mudar").innerHTML = "FASE 4";
+		}
+
+		if (pont >= 800) {
+			document.getElementById("mudar").innerHTML = "FASE FINAL";
+		}
+
+
 	}
 
 	criarBG();
@@ -122,6 +140,7 @@ function iniciarJogo(){
 	food.y = Math.floor(Math.random() * 15 + 1) * box;
 		tick = tick + 1;
 		if(tick == 10){
+
 			pont = pont + 35;
 			document.getElementById("pont").innerHTML = "PONTOS: "+ pont;
 			tick = tick - tick;
