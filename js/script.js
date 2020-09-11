@@ -1,6 +1,7 @@
 let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
 let box = 32;
+let pont = 0;
 let snake = [];
 snake[0] = {
 	x: 8 * box,
@@ -96,12 +97,15 @@ function iniciarJogo(){
 
 	if(snakeX != food.x || snakeY != food.y){
 		snake.pop();
+
 	}
 
 	else{
 
 	food.x = Math.floor(Math.random() * 15 + 1) * box;
 	food.y = Math.floor(Math.random() * 15 + 1) * box;
+		pont = pont + 10;
+		document.getElementById("pont").innerHTML = "Pontuação: "+ pont;
 	}
 	
 

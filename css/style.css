@@ -1,0 +1,22 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+
+.content{
+	
+}
+
+.head{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.jogo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
